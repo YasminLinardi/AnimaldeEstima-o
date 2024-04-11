@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gatin.MortePage"
+             Title=""
+             WidthRequest="600"
+             HeightRequest="463">
+
+    <ScrollView>
+        <Grid>
+            <Image Source="game.gif" 
+                   Aspect="AspectFill"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand" />
+
+            <StackLayout Grid.Row="1" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+                <Label Text="Game Over!"
+                       FontSize="40"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       Margin="10" />
+
+                <Button Text="Recomeçar"
+                        Clicked="OnRecomecarClicked"
+                        HorizontalOptions="Center" 
+                        WidthRequest="120"     
+                        Margin="205" />
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

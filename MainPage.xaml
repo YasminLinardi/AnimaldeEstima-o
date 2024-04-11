@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gatin.MainPage"
+             Title=""
+             WidthRequest="420"
+             HeightRequest="550">
+     
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="inicio.png" /> <!-- Define a imagem de fundo da página -->
+    </ContentPage.BackgroundImageSource>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Barra de progresso para o botão Brincar -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5">
+                <Image Source="novelo.png" WidthRequest="30" HeightRequest="30" VerticalOptions="CenterAndExpand"/> <!-- Ícone do botão Brincar -->
+                <ProgressBar x:Name="BrincarProgressBar" Progress="0" WidthRequest="200" HeightRequest="10" VerticalOptions="CenterAndExpand"/> <!-- Barra de progresso associada ao botão Brincar -->
+            </StackLayout>
+
+            <!-- Barra de progresso para o botão Comer -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5">
+                <Image Source="peixe.png" WidthRequest="30" HeightRequest="30" VerticalOptions="CenterAndExpand"/> <!-- Ícone do botão Comer -->
+                <ProgressBar x:Name="ComerProgressBar" Progress="0" WidthRequest="200" HeightRequest="10" VerticalOptions="CenterAndExpand"/> <!-- Barra de progresso associada ao botão Comer -->
+            </StackLayout>
+
+            <!-- Barra de progresso para o botão Beber -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5">
+                <Image Source="agua.png" WidthRequest="30" HeightRequest="30" VerticalOptions="CenterAndExpand"/> <!-- Ícone do botão Beber -->
+                <ProgressBar x:Name="BeberProgressBar" Progress="0" WidthRequest="200" HeightRequest="10" VerticalOptions="CenterAndExpand"/> <!-- Barra de progresso associada ao botão Beber -->
+            </StackLayout>
+
+            <!-- Grid com os botões -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Layout para os botões -->
+                <StackLayout Grid.Column="1"
+                             VerticalOptions="Center"
+                             HorizontalOptions="End"
+                             Spacing="10">
+                    <!-- Botão Outro -->
+<Image x:Name="OutroBtn"
+       Source="seta.png"
+       WidthRequest="40"
+       HeightRequest="40"
+       HorizontalOptions="End"
+       VerticalOptions="Center"
+       Margin="0,0,10,0">
+    <Image.GestureRecognizers>
+        <TapGestureRecognizer Tapped="OnOutroBtnTapped" /> <!-- Definir o método de manipulação de evento para o clique -->
+    </Image.GestureRecognizers>
+</Image>
+
+
+                    <!-- Botão Brincar -->
+                    <Image x:Name="BrincarBtn"
+                           Source="novelo.png"
+                           WidthRequest="40"
+                           HeightRequest="40"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           Margin="0,0,10,0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnBrincarClicked" /> <!-- Chama o método OnBrincarClicked quando o botão Brincar é tocado -->
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <!-- Botão Comer -->
+                    <Image x:Name="ComerBtn"
+                           Source="peixe.png"
+                           WidthRequest="40"
+                           HeightRequest="40"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           Margin="0,0,10,0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnComerClicked" /> <!-- Chama o método OnComerClicked quando o botão Comer é tocado -->
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <!-- Botão Beber -->
+                    <Image x:Name="BeberBtn"
+                           Source="agua.png"
+                           WidthRequest="40"
+                           HeightRequest="40"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           Margin="0,0,10,0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnBeberClicked" /> <!-- Chama o método OnBeberClicked quando o botão Beber é tocado -->
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
