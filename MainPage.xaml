@@ -43,13 +43,13 @@
                              HorizontalOptions="End"
                              Spacing="10">
                     <!-- Botão Outro -->
-<Image x:Name="OutroBtn"
-       Source="seta.png"
-       WidthRequest="40"
-       HeightRequest="40"
-       HorizontalOptions="End"
-       VerticalOptions="Center"
-       Margin="0,0,10,0">
+                    <Image x:Name="OutroBtn"
+                           Source="seta.png"
+                           WidthRequest="40"
+                           HeightRequest="40"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           Margin="0,0,10,0">
     <Image.GestureRecognizers>
         <TapGestureRecognizer Tapped="OnOutroBtnTapped" /> <!-- Definir o método de manipulação de evento para o clique -->
     </Image.GestureRecognizers>
