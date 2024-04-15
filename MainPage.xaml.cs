@@ -5,15 +5,12 @@ namespace Gatin
 {
     public partial class MainPage : ContentPage
     {
-        
         int brincarBtnCount = 10; // Inicializando com o valor inicial
         int comerBtnCount = 10; // Inicializando com o valor inicial
         int beberBtnCount = 10; // Inicializando com o valor inicial
         readonly int initialProgress = 10; // Valor inicial da barra de progresso
         readonly int progressDecreaseInterval = 2000; // Intervalo de diminuição da barra de progresso em milissegundos
         private bool isTimerRunning = false;
-
-        bool isSapoImage = false; 
 
         [Obsolete]
         public MainPage()
@@ -112,32 +109,6 @@ namespace Gatin
             // Reiniciar o temporizador
             StartProgressDecreaseTimer();
         }
-
-
-private async void OnOutroBtnTapped(object sender, EventArgs e)
-{
-    // Verificar o estado da imagem atual e alternar entre as imagens
-    if (isSapoImage)
-    {
-        // Trocar a imagem de fundo para inicio.png
-        await Device.InvokeOnMainThreadAsync(() =>
-        {
-            BackgroundImageSource = "inicio.png";
-        });
-
-        isSapoImage = false; // Atualizar o estado da imagem
-    }
-    else
-    {
-        // Trocar a imagem de fundo para sapo.png
-        await Device.InvokeOnMainThreadAsync(() =>
-        {
-            BackgroundImageSource = "sapo.png";
-        });
-
-        isSapoImage = true; // Atualizar o estado da imagem
-    }
-}
 
 
 

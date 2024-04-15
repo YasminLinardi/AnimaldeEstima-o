@@ -50,11 +50,10 @@
                            HorizontalOptions="End"
                            VerticalOptions="Center"
                            Margin="0,0,10,0">
-    <Image.GestureRecognizers>
-        <TapGestureRecognizer Tapped="OnOutroBtnTapped" /> <!-- Definir o método de manipulação de evento para o clique -->
-    </Image.GestureRecognizers>
-</Image>
-
+                        <Image.GestureRecognizers>
+                            <!-- Definir um reconhecimento de gesto para o botão Outro -->
+                        </Image.GestureRecognizers>
+                    </Image>
 
                     <!-- Botão Brincar -->
                     <Image x:Name="BrincarBtn"

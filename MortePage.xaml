@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Gatin.MortePage"
              Title=""
-             WidthRequest="600"
-             HeightRequest="463">
+             WidthRequest="420"
+             HeightRequest="550">
 
     <ScrollView>
         <Grid>
-            <Image Source="game.gif" 
+            <Image Source="died.png" 
                    Aspect="AspectFill"
                    VerticalOptions="FillAndExpand"
                    HorizontalOptions="FillAndExpand" />

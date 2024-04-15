@@ -13,7 +13,6 @@ namespace Gatin
             this.mainPage = mainPage; // Atribuir a referência da MainPage recebida pelo construtor
         }
 
-        [Obsolete]
         private async void OnRecomecarClicked(object sender, EventArgs e)
         {
             // Reiniciar a página principal usando a referência salva
