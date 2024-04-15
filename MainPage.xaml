@@ -7,37 +7,37 @@
              HeightRequest="550">
      
     <ContentPage.BackgroundImageSource>
-        <FileImageSource File="inicio.png" /> <!-- Define a imagem de fundo da página -->
+        <FileImageSource File="inicio.png" /> 
     </ContentPage.BackgroundImageSource>
 
     <ContentPage.Content>
         <StackLayout>
-            <!-- Barra de progresso para o botão Brincar -->
+            
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5">
-                <Image Source="novelo.png" WidthRequest="30" HeightRequest="30" VerticalOptions="CenterAndExpand"/> <!-- Ícone do botão Brincar -->
-                <ProgressBar x:Name="BrincarProgressBar" Progress="0" WidthRequest="200" HeightRequest="10" VerticalOptions="CenterAndExpand"/> <!-- Barra de progresso associada ao botão Brincar -->
+                <Image Source="novelo.png" WidthRequest="30" HeightRequest="30" VerticalOptions="CenterAndExpand"/> 
+                <ProgressBar x:Name="BrincarProgressBar" Progress="0" WidthRequest="200" HeightRequest="10" VerticalOptions="CenterAndExpand"/> 
             </StackLayout>
 
-            <!-- Barra de progresso para o botão Comer -->
+           
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5">
-                <Image Source="peixe.png" WidthRequest="30" HeightRequest="30" VerticalOptions="CenterAndExpand"/> <!-- Ícone do botão Comer -->
-                <ProgressBar x:Name="ComerProgressBar" Progress="0" WidthRequest="200" HeightRequest="10" VerticalOptions="CenterAndExpand"/> <!-- Barra de progresso associada ao botão Comer -->
+                <Image Source="peixe.png" WidthRequest="30" HeightRequest="30" VerticalOptions="CenterAndExpand"/>
+                <ProgressBar x:Name="ComerProgressBar" Progress="0" WidthRequest="200" HeightRequest="10" VerticalOptions="CenterAndExpand"/> 
             </StackLayout>
 
-            <!-- Barra de progresso para o botão Beber -->
+           
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5">
-                <Image Source="agua.png" WidthRequest="30" HeightRequest="30" VerticalOptions="CenterAndExpand"/> <!-- Ícone do botão Beber -->
-                <ProgressBar x:Name="BeberProgressBar" Progress="0" WidthRequest="200" HeightRequest="10" VerticalOptions="CenterAndExpand"/> <!-- Barra de progresso associada ao botão Beber -->
+                <Image Source="agua.png" WidthRequest="30" HeightRequest="30" VerticalOptions="CenterAndExpand"/> 
+                <ProgressBar x:Name="BeberProgressBar" Progress="0" WidthRequest="200" HeightRequest="10" VerticalOptions="CenterAndExpand"/> 
             </StackLayout>
 
-            <!-- Grid com os botões -->
+           
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <!-- Layout para os botões -->
+              
                 <StackLayout Grid.Column="1"
                              VerticalOptions="Center"
                              HorizontalOptions="End"
@@ -51,7 +51,6 @@
                            VerticalOptions="Center"
                            Margin="0,0,10,0">
                         <Image.GestureRecognizers>
-                            <!-- Definir um reconhecimento de gesto para o botão Outro -->
                         </Image.GestureRecognizers>
                     </Image>
 
@@ -64,7 +63,7 @@
                            VerticalOptions="Center"
                            Margin="0,0,10,0">
                         <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnBrincarClicked" /> <!-- Chama o método OnBrincarClicked quando o botão Brincar é tocado -->
+                            <TapGestureRecognizer Tapped="OnBrincarClicked" />
                         </Image.GestureRecognizers>
                     </Image>
 
@@ -77,7 +76,7 @@
                            VerticalOptions="Center"
                            Margin="0,0,10,0">
                         <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnComerClicked" /> <!-- Chama o método OnComerClicked quando o botão Comer é tocado -->
+                            <TapGestureRecognizer Tapped="OnComerClicked" /> 
                         </Image.GestureRecognizers>
                     </Image>
 
@@ -90,7 +89,7 @@
                            VerticalOptions="Center"
                            Margin="0,0,10,0">
                         <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnBeberClicked" /> <!-- Chama o método OnBeberClicked quando o botão Beber é tocado -->
+                            <TapGestureRecognizer Tapped="OnBeberClicked" /> 
                         </Image.GestureRecognizers>
                     </Image>
                 </StackLayout>
